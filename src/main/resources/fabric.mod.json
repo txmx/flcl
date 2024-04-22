@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "fabric-clojure",
+  "version": "${version}",
+  "name": "FabricLangClojure",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/txmxc/flcl"
+  },
+  "license": "MIT",
+  "icon": "assets/flcl/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [],
+    "main": []
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "languageAdapters": {
+    "clojure": "flcl.adapter.ClojureAdapter"
+  }
+}
