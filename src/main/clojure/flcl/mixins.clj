@@ -74,13 +74,6 @@
       (emit-injection helper (first mixins))
       (recur (next mixins)))))
 
-; the secret recipe of this macro has been discovered:
-; the parameters for the annotation itself should be placed in metadata on the target(s) name
-; for example, (:inject ^{:cancellable true} createMetadata [] (code))
-;
-; additionally, testing must be done to see what the rules are for conflicting type parameters with multiple methods
-; like what happens when we do (:inject [createMetadata createMetadataPlayers] [self ci])
-;                                                                               ^----^---- how would these methods match?
 (defmacro mixin [target & methods]
   (let [helper (new MixinHelper (resolve target))
         outpath (clojure.string/replace (str *ns*) #"\." "/")]
