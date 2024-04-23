@@ -1,9 +1,7 @@
 package flcl;
 
 import clojure.lang.IFn;
-import clojure.lang.ISeq;
 import clojure.lang.Keyword;
-import clojure.lang.RT;
 import org.jetbrains.annotations.Nullable;
 import org.objectweb.asm.*;
 
@@ -18,7 +16,6 @@ import java.util.Iterator;
 import java.util.Map;
 
 // T - the mixin target
-// S - the class this mixin might be extending
 public class MixinHelper<T> {
     private static final String MIXIN_ANNOTATION = "Lorg/spongepowered/asm/mixin/Mixin;";
 
